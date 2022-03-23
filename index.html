@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>По порядку</title>
+  </head>
+  <body>
+    <div id="root">
+      <header class="header" :class="{header_scroll: scrolled, header_navbar: navbar}">
+        <img src="/assets/img/logo.svg" alt="" class="header__logo">
+        <nav class="header__nav">
+          <a class="header__link" href="#main">
+            Главная
+          </a>
+          <a class="header__link" href="#about">
+            О нас
+          </a>
+          <a class="header__link" href="#tasks">
+            Помощь с задачами
+          </a>
+          <a class="header__link" href="#guide">
+            Как это работает
+          </a>
+          <a class="header__link" href="#contacts">
+            Контакты
+          </a>
+        </nav>
+        <a href="#" class="header__button">Войти</a>
+        <button class="header__toggler" @click="navbar = !navbar">
+          <i v-if="!navbar" class="fas fa-bars"></i>
+          <i v-else class="fas fa-times"></i>
+        </button>
+      </header>
+      <section id="main" class="main">
+        <div class="container">
+          <h1 class="main__title">
+            По порядку — твой помощник, студент!
+          </h1>
+          <p class="main__subtitle">
+            Образовательная платформа
+            <br>
+            для помощи студентам
+          </p>
+          <p class="main__subtitle">
+            Разберем всё <span>по порядку</span> вместе!
+          </p>
+          <a href="" class="main__button">
+            Присоединиться
+          </a>
+        </div>
+        <div class="main__decor"></div>
+        <img src="/assets/img/student.png" alt="" class="main__img">
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="about__title">
+            Кто мы такие и для чего это делаем?
+          </h2>
+          <div class="about__content">
+            <img src="/assets/img/mozghovoi-shturm-s-kollieghami-removebg-preview 1.png" alt="" class="about__img">
+            <div class="about__desc">
+              <p>
+                Мы — команда молодых энтузиастов, которые сами совсем недавно были студентами и понимаем,
+                с какими трудностями приходится сталкиваться во время учебного процесса — куча предметов,
+                знания большинство из которых никогда не понадобится, бесконечные дедлайны,
+                а при наличии работы — ещё и невозможность совмещения с учебой.
+              </p>
+              <p>
+                Сами пройдя через всё это мы поняли, насколько бы всё проще давалось,
+                если бы была возможность делегировать часть из этих задач на других людей или найти платформу,
+                где весь учебный материал по всем предметам был структурирован и объяснен простым языком,
+                чтобы оставалось его «просто взять и положить в свой мозг». Но увы,
+                ничего такого попросту нет. Но нас это не устроило.
+              </p>
+              <p>
+                Мы загорелись идеей создать платформу, которая была бы одновременно полезна для всех:
+                <br>
+                — для студентов, которые сами по какой бы то ни было причине не могут осилить учебные задачи или не хотят тратить на это время
+                <br>
+                — для студентов, которые хотят получить качественный, уникальный материал, лекции по учебным дисциплинам для облегчения учебного процесса
+                <br>
+                — для студентов и преподавателей, которые сами хотят помогать другим, записывать лекции, вести вебинары и так далее
+              </p>
+              <p>
+                Набрав в штат таких же целеустремленных людей,
+                мы создали свою образовательную платформу «По порядку» и уже готовы помочь студентам облегчить учебный процесс.
+                Мы только на самой начальной ступени развития платформы и нам всё ещё нужны новые специалисты.
+                Если ты желаешь нам помочь выстроить нашу империю вместе с нами, по порядку, то будь добр, свяжись с нами,
+                мы всегда рады новым людям в команде!
+              </p>
+              <p>
+                Ну а если ты студент, которому нужна помощь — присоединяйся, мы обязательно поможем!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="tasks" class="tasks">
+        <div class="container">
+          <h2 class="tasks__title">
+            Помощь с задачами
+          </h2>
+          <div class="tasks__content">
+            <div class="tasks__block tasks-block">
+              <h3 class="tasks-block__title">
+                Студентам
+              </h3>
+              <p class="tasks-block__par">
+                Помощь в режиме онлайн:
+              </p>
+              <ul class="tasks-block__list">
+                <li>
+                  с контрольными, лабораторными, практическими,
+                  <br>
+                  расчетными, домашними работами;
+                </li>
+                <li>
+                  с написанием рефераторов, курсовых и других видов работ;
+                </li>
+                <li>
+                  со сдачей зачетов, экзаменов
+                </li>
+              </ul>
+              <p class="tasks-block__par">
+                по всем основным академическим дисциплинам:
+              </p>
+              <div class="tasks-block__subjects">
+                <span>
+                  Высшая математика
+                </span>
+                <span>
+                  Физика
+                </span>
+                <span>
+                  Химия
+                </span>
+                <span>
+                  История
+                </span>
+                <span>
+                  Русский язык
+                </span>
+                <span>
+                  Биология
+                </span>
+                <span>
+                  Информатика
+                </span>
+                <span>
+                  Английский язык
+                </span>
+                <span>
+                  И по многим другим академическим дисциплинам
+                </span>
+              </div>
+            </div>
+            <div class="tasks__block tasks-block">
+              <h3 class="tasks-block__title">
+                Школьникам
+              </h3>
+              <p class="tasks-block__par">
+                Помощь в режиме онлайн:
+              </p>
+              <ul class="tasks-block__list">
+                <li>
+                  с контрольными, лабораторными, практическими,
+                  <br>
+                  расчетными, домашними работами;
+                </li>
+                <li>
+                  с написанием рефераторов, курсовых и других видов работ;
+                </li>
+                <li>
+                  со сдачей зачетов, экзаменов
+                </li>
+              </ul>
+              <p class="tasks-block__par">
+                по всем основным школьным предметам:
+              </p>
+              <div class="tasks-block__subjects">
+                <span>
+                  Алгебра и геометрия
+                </span>
+                <span>
+                  Физика
+                </span>
+                <span>
+                  Химия
+                </span>
+                <span>
+                  История
+                </span>
+                <span>
+                  Русский язык
+                </span>
+                <span>
+                  Биология
+                </span>
+                <span>
+                  Информатика
+                </span>
+                <span>
+                  Английский язык
+                </span>
+                <span>
+                  И по многим другим школьным предметам
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tasks__offer">
+          <p>
+            Бесплатно проконсультируем по вашему вопросу
+          </p>
+          <a href="#">
+            Проконсультироваться
+          </a>
+        </div>
+      </section>
+      <section id="guide" class="guide">
+        <div class="container">
+          <h2 class="guide__title">
+            Как это работает
+          </h2>
+          <div class="guide__steps">
+            <div class="guide__step">
+              <span>01</span>
+              <p>
+                Вы авторизовываетесь в кабинете удобным для вас способом и переходите в раздел «Помощь с задачами»
+              </p>
+            </div>
+            <div class="guide__step">
+              <span>02</span>
+              <p>
+                Оформляете заказ, указав предмет, тему (типы задач), сроки или дату,
+                прикрепив необходимые файлы (изображения с типовыми задачами, шаблоны и т.д.)
+              </p>
+            </div>
+            <div class="guide__step">
+              <span>03</span>
+              <p>
+                Платформа сама подберет вам подходящего исполнителя, с которым вы сможете лично обговорить все детали по заказу,
+                в том числе и стоимость работы. Вы работаете с заказчиками напрямую, поэтому стоимости работ ниже рыночных.
+              </p>
+            </div>
+            <div class="guide__step">
+              <span>04</span>
+              <p>
+                Вы вносите предоплату/оплату. Она будет временно заморожена на платформе в качестве гаранта как для вас, так и для исполнителя.
+              </p>
+            </div>
+            <div class="guide__step">
+              <span>05</span>
+              <p>
+                В указанные сроки исполнитель предоставит вам решение вашей задачи или поможет в режиме онлайн с экзаменом/зачетом.
+                Только после подтверждения вами о том, что задача выполнена, исполнитель получит свою оплату.
+              </p>
+            </div>
+            <div class="guide__video">
+              <iframe src="https://www.youtube.com/embed/LZr1HTSwBa0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offer">
+        <div class="offer__block offer__block_students">
+          <h2 class="offer__title">
+            Студентам
+          </h2>
+          <div class="offer__desc">
+            <p>
+              Помощь студентам в выполнений любых видов работ: решение задач, помощь на зачете/экзамене онлайн, написание курсовых, рефератов и другие виды работ.
+            </p>
+            <p>
+              Бесплатная консультация по заданиям. Выполнение заданий в указанные сроки и полное сопровождение до сдачи, включая правки.
+            </p>
+            <p>
+              Поддержка пользователей 24/7, не стесняйтесь задавать вопросы, мы всегда на связи во всех мессенджерах!
+            </p>
+          </div>
+          <a href="#" class="offer__button">
+            Разместить задание
+          </a>
+        </div>
+        <div class="offer__block offer__block_solvers">
+          <h2 class="offer__title">
+            Решателям
+          </h2>
+          <div class="offer__desc">         
+            <p>
+              Работа для экспертов по всем учебным направлениям, включая узкоспециализированные дисциплины. Мы всегда рады видеть новых специалистов в команде.
+            </p>
+            <p>
+              Гибкий график работы - выполняйте задания в удобное для вас время круглый год, совмещая с учебой или вашей основной работой.
+            </p>
+            <p>
+              Получайте регулярные выплаты по мере выполнения заказов и выводите деньги в любое удобное для вас время.
+            </p>
+          </div>
+          <a href="#" class="offer__button">
+            Стать решателем
+          </a>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__block">
+            <p class="footer__subtitle">
+              Навигация по сайту
+            </p>
+            <a href="#main" class="footer__link">
+              Главная
+            </a>
+            <a href="#about" class="footer__link">
+              О нас
+            </a>
+            <a href="#tasks" class="footer__link">
+              Помощь с задачами
+            </a>
+            <a href="#guide" class="footer__link">
+              Как это работает
+            </a>
+            <a href="#offer" class="footer__link">
+              Вакансии
+            </a>
+          </div>
+          <div id="contacts" class="footer__block footer__block_social">
+            <p class="footer__subtitle">
+              Мы в социальных сетях:
+            </p>
+            <div class="footer__social">
+              <a href="#">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-telegram-plane"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-facebook-square"></i>
+              </a>
+            </div>
+            <p class="footer__subtitle">
+              Написать в клиентскую поддержку:
+            </p>
+            <div class="footer__social">
+              <a href="#">
+                <i class="fab fa-vk"></i>
+              </a>
+              <a href="#">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-telegram-plane"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer__block footer__block_right">
+            <p class="footer__subtitle">
+              Услуги
+            </p>
+            <a href="#" class="footer__link">
+              Решение задач
+            </a>
+            <a href="#" class="footer__link">
+              Помощь на зачете/экзамене
+            </a>
+            <a href="#" class="footer__link">
+              Написание курсовых
+            </a>
+            <a href="#" class="footer__link">
+              Консультации
+            </a>
+            <a href="#" class="footer__link">
+              Прочие услуги
+            </a>
+          </div>
+          <div class="footer__block_copyright">
+            <p class="footer__par">
+              Используя «По порядку», вы принимаете <a href="#">пользовательское соглашение</a>
+              <br>
+              и <a href="#">политику обработки персональных данных</a>
+            </p>
+            <p class="footer__par_copyright">
+              © 2020 По порядку. Все права защищены
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/vue.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

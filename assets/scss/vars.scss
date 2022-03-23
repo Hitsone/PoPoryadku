@@ -1,0 +1,195 @@
+:root {
+  --color-bg1: #FAFAFA;
+  --color-bg2: #EEEEEE;
+  --color-bg3: #D0D0D0;
+
+  --color-text1: #202020;
+  --color-text2: #404040;
+  --color-text3: #606060;
+
+  --color-passive: #999999;
+  
+  --color-border: #D0D0D0;
+  --color-special1: #F5FCFF;
+}
+
+
+// colors
+
+$bg1: var(--color-bg1);
+$bg2: var(--color-bg2);
+$bg3: var(--color-bg3);
+$bgDark: #101010;
+
+$text1: var(--color-text1);
+$text2: var(--color-text2);
+$text3: var(--color-text3);
+$textLight: #FAFAFA;
+
+$passive: var(--color-passive);
+
+$accent: #0093DD;
+$green: #28AA3D;
+$red: #AA2828;
+$purple: #a55eea;
+$yellow: #f1c40f;
+
+$border: var(--color-border);
+$special1: var(--color-special1);
+
+$shadow: rgba(0, 0, 0, 0.1);
+
+
+// transition
+
+@mixin transition($d: 0.2s) {
+  transition: ease $d all;
+}
+
+@mixin hover($opacity: 0.7) {
+  @include transition;
+
+  &:hover {
+    opacity: $opacity;
+    cursor: pointer;
+  }
+}
+
+
+// scrollbars
+
+@mixin scrollbar($width: 1rem) {
+  scrollbar-width: thin;
+  scrollbar-color: $bg3 transparent;
+
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    @include transition();
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $bg3;
+    border-radius: 0.2rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $passive;
+  }
+
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
+
+// shadow
+
+@mixin shadow($x: 0px) {
+  box-shadow: $x 0 4px $shadow;
+}
+
+@mixin shadowBlock {
+  box-shadow: 0 0 2px $shadow;
+}
+
+@mixin shadowElement {
+  box-shadow: 0 0 1px $shadow;
+}
+
+
+// special
+
+@mixin input() {
+  font-size: 1.6rem;
+  resize: none;
+  color: $text2;
+
+  &::-webkit-input-placeholder {
+    color: $text4;
+  }
+  &::-moz-placeholder {
+    color: $text4;
+  }
+  &:-ms-input-placeholder {
+    color: $text4;
+  }
+  &:-moz-placeholder {
+    color: $text4;
+  }
+}
+
+
+// text
+
+@mixin h1 ($color: $text1) {
+  font-size: 3.6rem;
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin h2 ($color: $text1) {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin h3 ($color: $text2) {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $color;
+}
+
+@mixin p ($color: $text2) {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $color;
+}
+
+@mixin label ($color: $text2) {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $color;
+}
+
+
+// font-family
+
+@mixin font-face($font-famaly, $name, $font-weight, $font-style) {
+  @font-face {
+      font-family: $font-famaly;
+      font-style: $font-style;
+      font-weight: $font-weight;
+      src: url('../fonts/'+$font-famaly+'/'+$name+'/'+$name+'.woff2') format('woff2'), 
+        url('../fonts/'+$font-famaly+'/'+$name+'/'+$name+'.woff') format('woff'),
+        url('../fonts/'+$font-famaly+'/'+$name+'/'+$name+'.ttf') format('ttf'),
+        url('../fonts/'+$font-famaly+'/'+$name+'/'+$name+'.eot') format('eot');
+  }
+}
+
+@include font-face('OpenSans', 'OpenSans-Light', 300, normal);
+@include font-face('OpenSans', 'OpenSans-Regular', 400, normal);
+@include font-face('OpenSans', 'OpenSans-SemiBold', 600, normal);
+@include font-face('OpenSans', 'OpenSans-Bold', 700, normal);
+
+
+// media
+
+$xs-max: 575.98px;
+
+$sm-min: 576px;
+$sm-max: 767.98px;
+
+$md-min: 768px;
+$md-max: 991.98px;
+
+$lg-min: 992px;
+$lg-max: 1199.98px;
+
+$xl-min: 1200px;
+$xl-max: 1599.98px;
+
+$xxl-min: 1600px;
